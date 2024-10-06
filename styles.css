@@ -1,0 +1,187 @@
+/*algemene stijlen voor de body*/
+body {
+    font-family: 'Lucida Grande';
+    background-color: whitesmoke;
+    padding: 0;
+    margin: 0;
+    /*paddin en margin voor een goed opmaak*/
+}
+
+/*algemene padding voor alle secties om herhaling te voorkomen*/
+section {
+    padding: 2em;
+}
+
+/*flexbox voor centreren van elementen*/
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*stijlen voor de navigaties en menulinks*/
+ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    gap: 20em;
+    /*dit voegt ruimte tussen li-items*/
+}
+
+li {
+    list-style: none; /*geen opsommingstekens voor listitems*/
+}
+
+a {
+    background-color: lightgray;
+    padding: 1em;
+    text-decoration: none; /*geen onderstreping*/
+    transition: 350ms ease;
+}
+
+a:hover {
+    background-color: gray;
+}
+
+/*transictie-effecten toegevoegd aan afbeelding*/
+img {
+    width: 50px; /*bepaling van de breedte van de afbeelding*/
+    padding: 1em;
+    transition: transform 0.5s ease-in-out;
+}
+
+img:hover {
+    transform: scale(1.1);
+    /*afbeelding vergroot bij hover*/
+}
+
+/*stijlen voor de headers*/
+h1 {
+    font-size: 3em;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    background-color: lightgray;
+    padding: 1em;
+    width: 5em;
+    margin: 2em auto;
+}
+
+/*stijlen voor tekst p op home en about us*/
+.index p,
+.aboutus p {
+    display: flex;
+    max-width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+}
+
+/*stijlen voor afleverings pagina*/
+.episodes h3 {
+    text-align: left;
+}
+
+/*styling voor de artikelen op de afleveringspagina*/
+.episodes article {
+    display: flex;
+    background-color: lightgray;
+    align-items: center;
+    margin: 2em;
+    padding: 1em;
+    transition: background-color 350ms ease, transform 0.3s ease;
+    /*transitie bij hover*/
+}
+
+.episodes article:hover {
+    background-color: gray;
+    transform: scale(1.05);
+    /*klein zoom effect bij hover op artikelen*/
+}
+
+/*keyfram animatie voor een fadein effect*/
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+main{
+    margin-bottom: 4em; /*extra ruimte onder de main*/
+}
+
+main img {
+    animation: fadeIn 2s ease-in; /* fadein effect bij afbeeldingen*/
+    width: 10em;
+}
+
+/*verbeterde uitlijning van tekst in artikelen*/
+main article div {
+    display: flex;
+    flex-direction: column;
+}
+
+/*flexbox voor het logo en de titel in de header*/
+header section:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2em auto;
+    border-bottom: 1px solid grey;
+}
+
+/*marges tussen artikelen*/
+article {
+    margin-bottom: 1.5em;
+}
+
+/*stijelen voor de footer*/
+footer{
+    background-color: lightgray;
+    padding: 2em;
+    text-align: center;
+    border-top: 1px solid grey;
+    margin-top: 2em;
+}
+
+footer p{
+    margin: 0;
+    font-size: 1em;
+    display: flex;
+    align-items: center; /*uitlijning van tekst in de footer*/
+}
+
+/*specifieke stijl voor de footer bij episodes doordat deze anders stond dan de home en ep*/
+.episodes footer p{
+    display: block;
+    text-align: center;
+    margin: 0;
+    list-style: none;
+}
+
+/*stijlen voor de link in de footer*/
+footer a{
+    color: black;
+    padding: 1em;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease; /*hover effect*/
+}
+
+footer a:hover{
+   background-color: grey; /*achtergrondkleur veranderd bij de hover die in de footer staat*/
+}
+
+iframe{
+    display: block;
+    margin: 0 auto;
+    margin-top: 2em;
+    width: 300px;
+    height: 200px;
+}
